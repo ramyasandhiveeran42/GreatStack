@@ -1,0 +1,71 @@
+nav{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 4px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+.logo{
+    width: 100%;
+    max-width: 180px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+nav li{
+    cursor: pointer;
+    margin: 5px 20px;
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+}
+.dark-nav{
+    background-color: #212EA0;
+    transition: 0.5s;
+}
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* -------------> Media Query <-----------------  */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    nav ul {
+        display: none; /* Initially hidden menu */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #212EA0;
+        padding: 20px 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    nav li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    nav ul.show {
+        display: flex; 
+    }
+
+}

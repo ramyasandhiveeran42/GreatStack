@@ -1,0 +1,36 @@
+.campus{
+    margin: 80px auto;
+    text-align: center;
+    width: 90%;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gallery img{
+    width: 23%;
+    border-radius: 10px;
+}
+/* ------- Media Query----------- */
+@media screen and (max-width: 1024px) {
+    .gallery img {
+        width: 180px; /* Adjust width for medium-sized screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        justify-content: center; /* Center gallery items */
+    }
+
+    .gallery img {
+        width: 100px; /* Increase image width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery img {
+        width: 90px; /* Make images full-width on mobile screens */
+    }
+}

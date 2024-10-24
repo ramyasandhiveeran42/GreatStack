@@ -1,0 +1,115 @@
+.testimonials {
+    margin-top: 50px;
+    position: relative;
+}
+
+.next-btn,
+.back-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Fix to vertically center the buttons */
+    width: 50px;
+    border-radius: 50%;
+    background-color: #212EA0; /* Blue background */
+    padding: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-btn {
+    right: 10px; /* Positioned to the right */
+}
+
+.back-btn {
+    left: 10px; /* Positioned to the left */
+}
+
+.next-btn:hover,
+.back-btn:hover {
+    background-color: #1b2580; /* Darker blue on hover */
+}
+
+.next-btn:active,
+.back-btn:active {
+    transform: translateY(-50%) scale(0.95); /* Slight shrink effect on click */
+}
+
+/* Slider container */
+.sliders {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing slides */
+    position: relative;
+}
+
+.sliders ul {
+    display: flex; /* Align slides horizontally */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove list style */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.sliders li {
+    min-width: 50%; /* Each slide will take up full width */
+    box-sizing: border-box;
+    box-shadow: 0 4px; /* Optional shadow */
+    margin: 5px 5px 0px 5px;
+}
+
+/* Slide content styling */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color of each slide */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgb(226, 220, 220);
+    margin: 10px 0px 0px 0px;
+}
+
+/* User info inside each slide */
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px; /* Max width for user info */
+}
+
+.userinfo img {
+    width: 100%;
+    max-width: 100px; /* User image width */
+    height: 100px; /* User image height */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Cover the space */
+    margin-bottom: 20px;
+    border: 5px solid #212EA0; /* Border color for user image */
+}
+
+.userinfo h3 {
+    font-size: 18px; /* Name font size */
+    margin-bottom: 5px;
+    color: #333; /* Name color */
+}
+
+.userinfo span {
+    font-size: 1rem; /* Location font size */
+    color: #666; /* Location color */
+    margin-bottom: 15px;
+    color: #1b2580; /* Darker color for location */
+}
+
+.userinfo p {
+    font-size: 13px; /* Message font size */
+    color: #555; /* Message color */
+    line-height: 1.6; /* Line height for message */
+}
+
+
+

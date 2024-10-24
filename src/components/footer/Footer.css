@@ -1,0 +1,47 @@
+.footer{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+     padding: 20px 0;
+     font-weight: 700;
+}
+.footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.footer li{
+    margin: 0px 7px;
+    font-size: 13px;
+}
+/* -------------> Responsive Design <----------------- */
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .footer ul {
+        justify-content: center; /* Center the list items */
+        margin: 10px 0; /* Add margin to separate from other elements */
+    }
+
+    .footer li {
+        margin: 5px; /* Add more spacing between items for clarity */
+        font-size: 12px; /* Slightly reduce font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 15px 0; /* Reduce padding for smaller screens */
+    }
+
+    .footer li {
+        font-size: 11px; /* Further reduce font size for mobile devices */
+    }
+}

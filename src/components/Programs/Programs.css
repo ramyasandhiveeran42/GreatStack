@@ -1,0 +1,89 @@
+.programs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.program img{
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+}
+.program{
+    flex-basis: 31%;
+    position: relative;
+
+}
+.caption{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(0,15,152,0.3);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        opacity: 0;
+        padding-top: 70%;
+        transition: 0.4s;
+}
+.caption img{
+    width: 100%;
+    max-width: 60px;
+}
+.caption p{
+    color: white;
+}
+
+.program:hover .caption{
+    opacity: 1;
+    padding: 0;
+}
+/* -- Media Query */
+@media screen and (max-width: 1024px) {
+    .program {
+        flex-basis: 45%; /* Two items per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .programs {
+        justify-content: center; /* Center the items on smaller screens */
+    }
+
+    .program {
+        flex-basis: 100%; /* One item per row on tablet and mobile screens */
+        max-width: 90%; /* Reduce the width slightly on smaller screens */
+    }
+
+    .caption {
+        padding-top: 50%; /* Adjust caption padding for mobile devices */
+    }
+
+    .caption p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .program {
+        max-width: 100%; /* Full width on mobile screens */
+    }
+
+    .caption {
+        padding-top: 40%; /* Further reduce padding for smaller mobile screens */
+    }
+
+    .caption img {
+        max-width: 50px; /* Smaller icon size for mobile */
+    }
+
+    .caption p {
+        font-size: 12px; /* Smaller text size for mobile */
+    }
+}
